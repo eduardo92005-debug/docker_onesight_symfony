@@ -10,7 +10,7 @@ RUN apt update \
     && docker-php-ext-configure zip \
     && docker-php-ext-install zip
 
-WORKDIR /home/wwwroot/
+WORKDIR /var/www/docker_onesight_symfony
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
