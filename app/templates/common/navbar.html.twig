@@ -1,18 +1,20 @@
 <div class="container-fluid container">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand fw-bolder" href="#">Shining Events</a>
+    <span class="navbar-brand fw-bolder">Shining Events</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarText">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav align-items-center">
         <li class="nav-item active">
           <a class="nav-link" href="{{ path('app_view_event')}}">Show events</a>
         </li>
+        <li class="nav-item">
+          <a href="{{ path('app_create_event') }}" class="btn btn-success">
+          Create event
+          </a>
+        </li>
       </ul>
-      <a href="{{ path('app_create_event') }}" class="btn btn-success">
-        Create event
-      </a>
     </div>
   </nav>
 </div>
