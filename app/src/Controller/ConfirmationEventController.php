@@ -14,6 +14,8 @@ class ConfirmationEventController extends AbstractController
      */
     public function index(GenerateConfirmationToken $token): Response
     {
+        //Generate a token for the event confirmation
+        //Should I use a session to control the token?
         $my_token = $token->tokenize();
         return $this->render('confirmation_event/index.html.twig', [
             'my_token' => $my_token,

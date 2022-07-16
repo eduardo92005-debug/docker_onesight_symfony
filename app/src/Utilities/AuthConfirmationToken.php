@@ -3,7 +3,9 @@
 namespace App\Utilities;
 
 class AuthConfirmationToken {
-    
+    /*
+    *A class to authenticate a received token.
+    */
     public function authentication(string $token): bool
     {
         $token_decoded = base64_decode($token);

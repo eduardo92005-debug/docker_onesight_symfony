@@ -16,11 +16,11 @@ class CreateEventController extends AbstractController
      */
     public function index(Request $request): Response
     {
+        //Handle form and event to POST request
         $event = new Event();
         $form = $this->createForm(CreateEventFormType::class, $event);
-
         $form->handleRequest($request);
-
+        //Submit form and validate it
         if($form->isSubmitted() && $form->isValid()) {
             $event = $form->getData();
             $event->setCreatedAt(new \DateTimeImmutable());

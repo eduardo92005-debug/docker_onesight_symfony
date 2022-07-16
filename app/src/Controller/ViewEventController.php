@@ -15,6 +15,7 @@ class ViewEventController extends AbstractController
      */
     public function index(EventRepository $repo):Response
     {
+        //Show only approved events
         $events = $repo->findBy(['approval_status' => true]);
         return $this->render('view_event/index.html.twig', [
             'events' => $events,
