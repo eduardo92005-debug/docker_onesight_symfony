@@ -42,6 +42,11 @@ class Event
      */
     private $approval_status;
 
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $creator;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Event
     public function setApprovalStatus(bool $approval_status): self
     {
         $this->approval_status = $approval_status;
+
+        return $this;
+    }
+
+    public function getCreator(): ?string
+    {
+        return $this->creator;
+    }
+
+    public function setCreator(?string $creator): self
+    {
+        $this->creator = $creator;
 
         return $this;
     }

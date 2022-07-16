@@ -23,7 +23,9 @@ class CreateEventFormType extends AbstractType
             ->add('description', TextareaType::class)
             ->add('number_participants', IntegerType::class)
             ->add('approval_status', CheckboxType::class)
-            ->add('submit', SubmitType::class)
+            ->add('submit', SubmitType::class, [
+                'attr' => ['class' => 'btn btn-primary w-100']
+            ])
         ;
     }
 

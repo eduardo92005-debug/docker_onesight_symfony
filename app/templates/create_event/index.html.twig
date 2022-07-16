@@ -5,11 +5,16 @@
 {% form_theme form 'bootstrap_5_layout.html.twig' %}
 {% block body %}
 <style>
-
+    .maxHeight{
+        max-height:100vh;
+    }
+    .fullHeight{
+        height:82vh;
+    }
 </style>
 
-<div class="container">
-    <div class="row">
+<div class="container Wrapper maxHeight fullHeight">
+    <div class="row align-items-center h-100">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
