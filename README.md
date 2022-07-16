@@ -28,6 +28,12 @@ To finish:
 php bin/console doctrine:fixtures:load
 ```
 So it's OKAY! Now you can navigate through website!
+## MySQL
+To access mysql database, use:
+```
+docker compose exec database mysql -u{MYSQL_USER} -p{MYSQL_PASSWORD}
+```
+Remember to change {MYSQL_USER} and {MYSQL_PASSWORD} to the env variables in docker-compose.yaml
 ## Routes
 ```
 localhost:8080/view/event - Check approved events!
