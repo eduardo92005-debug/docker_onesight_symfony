@@ -49,6 +49,7 @@ localhost:8080/confirmation/event - A confirmation token to confirm that you've 
 - Maker-bundle
 - Symfony Form
 - Bootstrap
+- Pleasant BEM/CSS
 ## Docker Images
 - Mysql:8.0
 - Nginx server
