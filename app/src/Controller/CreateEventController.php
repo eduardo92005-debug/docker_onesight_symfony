@@ -23,11 +23,12 @@ class CreateEventController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()) {
             $event = $form->getData();
+            $event->setCreatedAt(new \DateTimeImmutable());
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($event);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_view_event');
+            return $this->redirectToRoute('app_confirmation_event');
         }
         return $this->render('create_event/index.html.twig', [
             'form' => $form->createView(),

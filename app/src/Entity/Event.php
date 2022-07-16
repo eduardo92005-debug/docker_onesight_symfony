@@ -47,6 +47,16 @@ class Event
      */
     private $creator;
 
+    /**
+     * @ORM\Column(type="datetime_immutable")
+     */
+    private $created_at;
+
+    /**
+     * @ORM\Column(type="datetime_immutable", nullable=true)
+     */
+    private $deleted_at;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +130,30 @@ class Event
     public function setCreator(?string $creator): self
     {
         $this->creator = $creator;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->created_at;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $created_at): self
+    {
+        $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getDeletedAt(): ?\DateTimeImmutable
+    {
+        return $this->deleted_at;
+    }
+
+    public function setDeletedAt(\DateTimeImmutable $deleted_at): self
+    {
+        $this->deleted_at = $deleted_at;
 
         return $this;
     }
