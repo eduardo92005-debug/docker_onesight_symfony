@@ -37,8 +37,8 @@ Remember to change {MYSQL_USER} and {MYSQL_PASSWORD} to the env variables in doc
 ## Routes
 ```
 localhost:8080/view/event - Check approved events!
-localhost:8080/create/event - Create a event deny or approve it!
-localhost:8080/confirmation/event - A confirmation token to confirm that you created a event!
+localhost:8080/create/event - Create an event deny or approve it!
+localhost:8080/confirmation/event - A confirmation token to confirm that you've created an event!
 ```
 ## Bundles used
 - Doctrine/ORM
