@@ -55,7 +55,9 @@ localhost:8080/confirmation/event - A confirmation token to confirm that you've 
 - Nginx server
 - PHP 7.4
 ## Tech used
-- Azure DevOps
+- Heroku
 - Docker/Docker Compose
 - MySQL
 - Doctrine
+- Frontend
+- Git
